@@ -1,6 +1,8 @@
 import { FETCH_PRODUCTS } from '../actions/types'
 
-const initialState = [];
+const initialState = {
+    productsList: []
+};
 
 export default function productsReducer(state = initialState, action) {
     switch(action.type) {
