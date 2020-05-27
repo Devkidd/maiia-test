@@ -3,17 +3,19 @@ import PropTypes from 'prop-types'
 import { AddItemToShop } from '../../redux/actions/shopAction'
 import { connect } from 'react-redux'
 
+import { CardContainer, CardTitle, CardImage, CardButton } from './styles'
+
 function Card(props) {
-    const {AddItemToShop, shop} = props
+    const {AddItemToShop} = props
     const product = props.product
     return (
-        <div>
+        <CardContainer>
             <a href={product.url}>
-                <img src={product.thumbnailUrl} alt={product.title} />
-                <h3>{product.title}</h3>
+                <CardImage src={product.thumbnailUrl} alt={product.title} />
+                <CardTitle>{product.title}</CardTitle>
             </a>
-            <button onClick={() => AddItemToShop(product)}>Ajouter au panier</button>
-        </div>
+            <CardButton onClick={() => AddItemToShop(product)}>Ajouter au panier</CardButton>
+        </CardContainer>
     )
     
 }

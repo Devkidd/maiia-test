@@ -10,4 +10,12 @@ export const GlobalStyle = createGlobalStyle`
         max-width: 1200px;
         margin: auto;
     }
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+    button {
+        border: none;
+        background: inherit;
+    }
 `
