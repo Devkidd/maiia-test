@@ -3,9 +3,12 @@ import { FETCH_PRODUCTS } from './types'
 
 export const fetchProducts = () => async (dispatch) => {
     await axios
-        .get('https://jsonplaceholder.typicode.com/photos')
+        .get('https://jsonplaceholder.typicode.com/photos', {
+            params: {
+                _limit: 10
+            }
+        })
         .then((Response) => {
-            console.log(Response)
             dispatch({
                 type: FETCH_PRODUCTS,
                 payload: Response.data
