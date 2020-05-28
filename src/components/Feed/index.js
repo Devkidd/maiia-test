@@ -6,12 +6,11 @@ import Pagination from "react-js-pagination";
 import Card from '../Card'
 import AddCart from '../AddCart'
 
-import { CardContainer, Title, Article, PaginationContainer } from './styles'
+import { CardContainer, Title, Article, PaginationContainer, SubTitle } from './styles'
 
 export const Feed = ({products, fetchProducts}) => {
     const [productPerPage, setProductPerPage] = useState(15)
     const [currentPage, setCurrentPage] = useState(1)
-    const [isLoading, setIsLoading] = useState(true)
 
     const indexOfLastProduct = currentPage * productPerPage
     const indexOfFirstProduct = indexOfLastProduct - productPerPage
@@ -20,7 +19,6 @@ export const Feed = ({products, fetchProducts}) => {
 
     useEffect(() => {
         fetchProducts();
-        setIsLoading(false);
     }, [fetchProducts])
 
 
@@ -31,9 +29,11 @@ export const Feed = ({products, fetchProducts}) => {
 
     return (
         <>
-        <Title>Listes des produits ({products.length})</Title>
+        <Title>Produits ({products.length})</Title>
+        {products.length === 0 && (
+            <SubTitle>Pas de produits</SubTitle>
+        )}
         <CardContainer>
-        {isLoading && (<h2>Chargements des produits...</h2>)}
         {products && currentProducts.map((product) => {
             return (
                 <Article key={product.id}>

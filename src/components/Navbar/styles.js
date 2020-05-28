@@ -9,6 +9,10 @@ export const NavContainer = styled.nav`
     margin-bottom: 80px;
     color: #333;
     margin-top: 32px;
+
+    @media screen and (max-width: 850px) {
+        justify-content: space-around;
+    }
 `
 export const BasketIcon = styled.span`
     cursor: pointer;

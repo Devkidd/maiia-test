@@ -14,3 +14,10 @@ export const fetchProducts = () => async (dispatch) => {
             console.log(err);
         })
 }
+
+export const SearchProducts = (value) =>  (dispatch) => {
+    dispatch({
+        type: 'SEARCH',
+        payload: value
+    })
+}

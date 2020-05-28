@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faShoppingBasket } from '@fortawesome/free-solid-svg-icons'
+import { faShoppingBasket, faSearch } from '@fortawesome/free-solid-svg-icons'
 import Shop from '../Shop'
+import InputSearch from '../InputSearch'
 
 import { NavContainer, BasketIcon, Logo } from './styles'
 
@@ -11,7 +12,9 @@ export default function Navbar() {
         <NavContainer>
             <Logo>MAIIA</Logo>
             <BasketIcon>
-                <FontAwesomeIcon icon={faShoppingBasket} onClick={() => setIsOpen(!isOpen)}/>
+                <InputSearch />
+                <FontAwesomeIcon icon={faSearch} size='1x' style={{marginRight: '16px'}} />
+                <FontAwesomeIcon icon={faShoppingBasket} size='1x' onClick={() => setIsOpen(!isOpen)}/>
                 <Shop isOpen={isOpen}/>
             </BasketIcon>     
         </NavContainer>
