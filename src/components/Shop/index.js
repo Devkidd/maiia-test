@@ -3,8 +3,9 @@ import { INIT_STATE } from '../../redux/actions/types'
 import { connect } from 'react-redux'
 import Card from '../Card'
 import RemoveCart from '../RemoveCart'
+import EmptyCard from '../../assets/emptyCart.svg'
 
-import { Container, CardContainer} from './styles'
+import { Container, CardContainer, EmptyCardImg, EmptyCardTitle} from './styles'
 
 export const Shop = ({shoplist, dispatch, isOpen}) => {
     useEffect(() => {
@@ -16,7 +17,6 @@ export const Shop = ({shoplist, dispatch, isOpen}) => {
     }, [dispatch])
     return (
         <Container isOpen={isOpen}>
-            <h2>Panier</h2>
             { shoplist  && shoplist.map((item) => {
                 return (
                     <CardContainer key={item.id}>
@@ -26,7 +26,12 @@ export const Shop = ({shoplist, dispatch, isOpen}) => {
                     </CardContainer>
                 )
             })}
-            {shoplist && shoplist.length === 0 && (<h6>Pas de produit</h6>)}
+            {shoplist && shoplist.length === 0 && (
+                <>
+                <EmptyCardTitle>Panier vide</EmptyCardTitle>
+                <EmptyCardImg src={EmptyCard} alt='empty cart'/>
+                </>
+            )}
         </Container>
     )
 }

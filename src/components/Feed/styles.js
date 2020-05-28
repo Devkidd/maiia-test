@@ -4,6 +4,8 @@ export const CardContainer = styled.main`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 24px;
+
+    
 `
 
 export const Title = styled.h2`
@@ -21,4 +23,19 @@ export const Article = styled.article`
     align-items: center;
     text-align: center;
     position: relative;
+`
+
+export const PaginationContainer = styled.section`
+    margin: 32px 0;
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    li {
+        padding: 8px;
+        margin: 0 16px; 
+    }
+    
 `

@@ -1,4 +1,4 @@
-import { ADD_ITEM_SHOP, REMOVE_ITEM_SHOP, INIT_STATE, INIT_LOCAL_STORAGE } from '../actions/types'
+import { ADD_ITEM_SHOP, REMOVE_ITEM_SHOP, INIT_STATE } from '../actions/types'
 
 const initialState = {
     shopList: []

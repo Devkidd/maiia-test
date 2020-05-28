@@ -36,3 +36,14 @@ export const CardContainer = styled.section`
         margin: 0 8px;
     }
 `
+export const EmptyCardTitle = styled.h4`
+    color: #333;
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 32px 0;
+`
+
+export const EmptyCardImg = styled.img`
+    width: 50%;
+`

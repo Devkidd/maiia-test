@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { AddItemToShop } from '../../redux/actions/shopAction'
 import { connect } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
