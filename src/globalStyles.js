@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
     body {
-        max-width: 1200px;
+        max-width: 900px;
         margin: auto;
     }
     a {

@@ -13,3 +13,12 @@ export const Title = styled.h2`
     letter-spacing: 1px;
     font-weight: 400;
 `
+
+export const Article = styled.article`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* width: 100%; */
+    text-align: center;
+`

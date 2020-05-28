@@ -1,12 +1,36 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    height: 100%;
-    width: 30%;
-    position: fixed;
-    right: -100%;
-    top: 0;
-    bottom: 0;
+    height: auto;
+    min-height: 300px;
+    width: 350px;
+    position: absolute;
+    right:  0;
+    top: 24px;
+    padding: 16px;
     text-align: center;
-    background: #eee;
+    background: white;
+    filter: drop-shadow(0 0 1rem #eee);
+    display: ${props => props.isOpen ? 'block' : 'none'};
+`
+export const CardContainer = styled.section`
+    margin: 26px 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 20%;
+        margin: 0;
+    }
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h3 {
+        margin: 0 8px;
+    }
 `

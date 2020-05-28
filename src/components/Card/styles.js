@@ -1,14 +1,5 @@
 import styled from 'styled-components'
 
-export const CardContainer = styled.article`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* width: 100%; */
-    text-align: center;
-`
-
 export const CardTitle = styled.h3`
     color: #333;
     font-size: 16px;

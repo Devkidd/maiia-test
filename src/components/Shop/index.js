@@ -1,40 +1,35 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
+import { INIT_STATE } from '../../redux/actions/types'
 import { connect } from 'react-redux'
 import Card from '../Card'
 
-import { Container } from './styles'
+import { Container, CardContainer } from './styles'
 
-export const Shop = () => {
-    const [shopList, setShopList] = useState([])
-    const getItemShop = () => {
-        setShopList(JSON.parse(localStorage.getItem('panier')))
-    }
-
+export const Shop = ({shoplist, dispatch, isOpen}) => {
     useEffect(() => {
-        getItemShop()
-    }, [])
-    console.log('shoplist', shopList)
+        const shopListLocal = localStorage.getItem('panier');
+        dispatch({
+            type: INIT_STATE,
+            payload: JSON.parse(shopListLocal),
+        })
+    }, [dispatch])
     return (
-        <Container>
+        <Container isOpen={isOpen}>
             <h2>Panier</h2>
-            { /* shopList.map((item) => {
-                console.log(item)
+            { shoplist  && shoplist.map((item) => {
                 return (
-                    <section key={item.id}>
+                    <CardContainer key={item.id}>
                         <Card product={item} />
-                    </section>
+                    </CardContainer>
                 )
-                */})}
+            })}
         </Container>
     )
 }
 
 const mapStateToProps = (state) => ({
-    
+    shoplist: state.shop.shopList
 })
 
-const mapDispatchToProps = {
-    
-}
 
-export default connect(mapStateToProps, mapDispatchToProps)(Shop)
+export default connect(mapStateToProps)(Shop)
