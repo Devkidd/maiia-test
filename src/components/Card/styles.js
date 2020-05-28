@@ -2,9 +2,9 @@ import styled from 'styled-components'
 
 export const CardTitle = styled.h3`
     color: #333;
-    font-size: 16px;
+    font-size: 14px;
     width: 60%;
-    margin: auto;
+    margin: 0 auto 16px auto;
 `
 
 export const CardImage = styled.img`

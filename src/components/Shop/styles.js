@@ -11,6 +11,7 @@ export const Container = styled.div`
     text-align: center;
     background: white;
     filter: drop-shadow(0 0 1rem #eee);
+    z-index: 2;
     display: ${props => props.isOpen ? 'block' : 'none'};
 `
 export const CardContainer = styled.section`
@@ -22,6 +23,7 @@ export const CardContainer = styled.section`
     img {
         width: 20%;
         margin: 0;
+        box-shadow: none;
     }
 
     a {

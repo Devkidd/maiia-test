@@ -7,9 +7,9 @@ export const AddItemToShop = (item) => (dispatch) => {
     })
 }
 
-export const RemoveItemShop = (item) => (dispatch) => {
+export const RemoveItemShop = (id) => (dispatch) => {
     dispatch({
         type: REMOVE_ITEM_SHOP,
-        payload: item
+        payload: id
     })
 }

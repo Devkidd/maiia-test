@@ -1,11 +1,17 @@
 import React, { Component } from 'react'
 import { AddItemToShop } from '../../redux/actions/shopAction'
 import { connect } from 'react-redux'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
+
+import { Button } from './styles'
 
 export const AddCart = ({product, AddItemToShop}) => {
     return (
         <>
-        <button onClick={() => AddItemToShop(product)}>Ajouter au panier</button>
+            <Button onClick={() => AddItemToShop(product)}>
+                <FontAwesomeIcon icon={faCartPlus} color='#673AB7' size='lg' style={{cursor: 'pointer'}}/>
+            </Button>
         </>
     )
 }

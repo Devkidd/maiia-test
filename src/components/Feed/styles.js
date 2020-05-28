@@ -17,8 +17,8 @@ export const Title = styled.h2`
 export const Article = styled.article`
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
-    /* width: 100%; */
     text-align: center;
+    position: relative;
 `

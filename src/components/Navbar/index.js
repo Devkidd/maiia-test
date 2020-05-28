@@ -10,8 +10,8 @@ export default function Navbar() {
     return (
         <NavContainer>
             <Logo>MAIIA</Logo>
-            <BasketIcon onClick={() => setIsOpen(!isOpen)} >
-                <FontAwesomeIcon icon={faShoppingBasket}/>
+            <BasketIcon>
+                <FontAwesomeIcon icon={faShoppingBasket} onClick={() => setIsOpen(!isOpen)}/>
                 <Shop isOpen={isOpen}/>
             </BasketIcon>     
         </NavContainer>

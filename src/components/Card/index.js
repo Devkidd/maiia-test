@@ -6,7 +6,7 @@ import { CardTitle, CardImage } from './styles'
 
 
 
-function Card({product, cart}) {
+function Card({product}) {
     return (
         <>
             <a href={product.url}>

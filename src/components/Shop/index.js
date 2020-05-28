@@ -2,8 +2,9 @@ import React, { useEffect } from 'react'
 import { INIT_STATE } from '../../redux/actions/types'
 import { connect } from 'react-redux'
 import Card from '../Card'
+import RemoveCart from '../RemoveCart'
 
-import { Container, CardContainer } from './styles'
+import { Container, CardContainer} from './styles'
 
 export const Shop = ({shoplist, dispatch, isOpen}) => {
     useEffect(() => {
@@ -20,9 +21,12 @@ export const Shop = ({shoplist, dispatch, isOpen}) => {
                 return (
                     <CardContainer key={item.id}>
                         <Card product={item} />
+                        {item.nb && <h5>({item.nb}) </h5>}
+                        <RemoveCart product={item} />
                     </CardContainer>
                 )
             })}
+            {shoplist && shoplist.length === 0 && (<h6>Pas de produit</h6>)}
         </Container>
     )
 }

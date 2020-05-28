@@ -19,8 +19,8 @@ export const Feed = (props) => {
         <CardContainer>
         {products.map((product) => {
             return (
-                <Article>
-                <Card product={product} key={product.id} />
+                <Article key={product.id}>
+                <Card product={product} />
                 <AddCart product={product} />
                 </Article>
             )
