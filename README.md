@@ -18,3 +18,12 @@ yarn install
 ```bash
 yarn start
 ```
+
+Or if you use NPM
+
+```bash
+npm install
+```
+
+```bash
+npm start
