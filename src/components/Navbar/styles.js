@@ -25,3 +25,19 @@ export const Logo = styled.h2`
     font-weight: 900;
     color: #673AB7;
 `
+
+export const Badge = styled.span`
+    position: absolute;
+    top: -11px;
+    right: -14px;
+    background: #673AB7;
+    color: white;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    font-weight: bold;
+`

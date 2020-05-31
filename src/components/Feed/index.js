@@ -8,7 +8,7 @@ import AddCart from '../AddCart'
 
 import { CardContainer, Title, Article, PaginationContainer, SubTitle } from './styles'
 
-export const Feed = ({products, fetchProducts}) => {
+export const Feed = ({products, fetchProducts, loading}) => {
     const [productPerPage, setProductPerPage] = useState(15)
     const [currentPage, setCurrentPage] = useState(1)
 
@@ -20,8 +20,6 @@ export const Feed = ({products, fetchProducts}) => {
     useEffect(() => {
         fetchProducts();
     }, [fetchProducts])
-
-
 
     const handlePageChange = (pageNumber) => {
         setCurrentPage(pageNumber)
@@ -58,6 +56,7 @@ export const Feed = ({products, fetchProducts}) => {
 
 const mapStateToProps = (state) => ({
     products: state.products.productsList,
+    loading: state.products.loading
 })
 
 const mapDispatchToProps = {
