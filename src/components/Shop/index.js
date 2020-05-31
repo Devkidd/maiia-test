@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { INIT_STATE } from '../../redux/actions/types'
+import { INIT_STATE } from '../../redux/types'
 import { connect } from 'react-redux'
 import Card from '../Card'
 import RemoveCart from '../RemoveCart'

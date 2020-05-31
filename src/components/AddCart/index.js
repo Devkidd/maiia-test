@@ -1,5 +1,5 @@
 import React from 'react'
-import { AddItemToShop } from '../../redux/actions/shopAction'
+import { AddItemToShop } from '../../redux/shop/shopAction'
 import { connect } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons'

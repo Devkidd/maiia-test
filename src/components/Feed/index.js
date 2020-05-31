@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
-import { fetchProducts } from '../../redux/actions/productsAction'
+import { fetchProducts } from '../../redux/products/productsAction'
 import Pagination from "react-js-pagination";
 
 import Card from '../Card'

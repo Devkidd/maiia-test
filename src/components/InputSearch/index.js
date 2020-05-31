@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {SearchProducts, fetchProducts} from '../../redux/actions/productsAction'
+import {SearchProducts, fetchProducts} from '../../redux/products/productsAction'
 import { connect } from 'react-redux'
 
 import { Input } from './styles'

@@ -1,4 +1,4 @@
-import { ADD_ITEM_SHOP, REMOVE_ITEM_SHOP } from '../actions/types'
+import { ADD_ITEM_SHOP, REMOVE_ITEM_SHOP } from '../types'
 
 export const AddItemToShop = (item) => (dispatch) => {
     dispatch({

@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { FETCH_PRODUCTS } from './types'
+import { FETCH_PRODUCTS } from '../types'
 
 export const fetchProducts = () => async (dispatch) => {
     await axios

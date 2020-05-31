@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
@@ -26,5 +26,5 @@ const mapStateToProps = (state) => ({
     shop: state.shop.shopList,
 })
 
-export default connect(mapStateToProps)(Card)
+export default connect(mapStateToProps)(memo(Card))
 
