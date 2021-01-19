@@ -1,4 +1,4 @@
-# MIIA TEST
+# MAIIA TEST
 
 Technical test React + Redux.
 
